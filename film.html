@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html public>
+
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<title> Recherche </title>
+			<style type="text/css">
+			#hidden { display: none; }
+			</style>
+	</head>
+	
+	<body>
+	<h1>Rechercher un film dans la base</h1><br>
+	
+	<form name="formulaire" method="get" action="film.php">
+	<p>
+       Quelle recherche ? <br><br>
+		   
+		   <input type="radio" name="choix" value="1"/>
+		   <label>Complète </label><br>
+				<div id="hidden">
+				Titre du film 
+				<input type="text"  name="titre"  value=""><br>
+				sorti en :  
+				<input type="text"  name="annee"  size="5" value=""><br>
+					
+				dont un des personnages est : 
+				<input type="text"  name="perso"  value=""><br><br>
+				</div>
+					
+	    <input type="radio" name="choix" value="0" checked="checked"/>
+	   <label>Par mot-clé </label><br>
+		<input type="text" value="" name="motcle">
+	   </p>
+		<input type="submit" value="Rechercher" name="rech" />
+		
+	</form>
+	
+	
+	<script language="javascript" type="text/javascript">
+		var oui = document.formulaire.choix[0];
+        var non = document.formulaire.choix[1];
+        oui.onclick = function() {
+            document.getElementById("hidden").style.display = "block"
+        };
+        non.onclick = function() {
+            document.getElementById("hidden").style.display = "none"
+        };
+	</script>
+		
+	</body>
+	
+</html>
