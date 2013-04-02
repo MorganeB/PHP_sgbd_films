@@ -2,16 +2,17 @@
 
 <html>
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-			<title> Recherche </title>
-			<style type="text/css">
-			#hidden { display: none; }
-			</style>
-	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> Recherche </title>
+	<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
 	
 	<body>
-	<h1>Rechercher un film dans la base</h1><br>
+	<div id="header">
+	<h1>Rechercher un film dans la base</h1><br><br>
+	</div>
 	
+	<div id="global">
 	<form name="formulaire" method="get" action="film.php">
 	<p>
        Quelle recherche ? <br><br>
@@ -47,7 +48,8 @@
             document.getElementById("hidden").style.display = "none"
         };
 	</script>
-		
+	
+	</div>
 	</body>
 	
 </html>
